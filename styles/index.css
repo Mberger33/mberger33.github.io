@@ -1,0 +1,112 @@
+/* Front page (index.html) stylesheet */
+:root{
+    --selected_background:#E5A412;
+    --hover_background: #21FFB2;
+}
+nav>ul>li{
+    display:inline-block;
+    border: black 1px solid;
+    padding:5px;
+}
+nav>ul>li:hover {
+    background-color:var(--selected_background);
+}
+nav>ul>:first-child {
+    background-color:var(--hover_background);
+}
+
+.animation-container{
+    position:relative;
+}
+h1 {
+    padding-left:2rem;
+    padding-top:1rem;
+}
+
+#spinner1 {
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-name: spin;
+    animation-timing-function: linear;
+    width:20px;
+    height: 20px;
+    background-color: purple;
+    position:absolute;
+    top:50px;
+    left:30px;
+
+}
+#spinner2 {
+    animation-duration: 2.5s;
+    animation-direction: alternate;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-name: spin2;
+    animation-timing-function: linear;
+    width:20px;
+    height: 20px;
+    background-color: #800f0e;
+    position:absolute;
+    top:100px;
+    left:30px;
+}
+#spinner3 {
+    animation-duration: 3.5s;
+    animation-direction: alternate;
+    animation-delay: 7s;
+    animation-iteration-count: infinite;
+    animation-name: spin3;
+    animation-timing-function: linear;
+    width:20px;
+    height: 20px;
+    background-color: #078055;
+    position:absolute;
+    top:150px;
+    left:30px;
+}
+
+@keyframes spin {
+    0% {
+        top: 50px;
+        left:30px;
+        transform:rotate(0rad);
+    }
+    100% {
+        top: 100px;
+        left: 1200px;
+        transform:rotate(25rad);
+    }
+}
+@keyframes spin2 {
+    0% {
+        top: 100px;
+        left:30px;
+        transform:rotate(1rad);
+    }
+    100% {
+        top: 100px;
+        left: 1200px;
+        transform:rotate(-25rad);
+    }
+}
+@keyframes spin3 {
+    0% {
+        top: 150px;
+        left:30px;
+        transform:rotate(1rad);
+    }
+    100% {
+        top: 60px;
+        left: 1200px;
+        transform:rotate(25rad);
+    }
+}
+
+
+h1,h2{
+    font-family: 'Press Start 2P', cursive;
+}
+/*love and hate*/
+/*link o hover active*/
