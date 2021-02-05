@@ -1,0 +1,199 @@
+/* Front page (index.html) stylesheet */
+:root{
+    --selected_background:#B89C70;
+    --hover_background: #6EFFA5;
+    --color3: #FFBE54;
+    --color4: #B255FF;
+    --color5: #21FF76;
+    --color6: #800f0e;
+}
+nav>ul>li{
+    display:inline-block;
+    border: black 1px solid;
+    padding:5px;
+}
+nav>ul>li:hover {
+    background-color:var(--hover_background);
+}
+nav>ul>:first-child {
+    background-color:var(--selected_background);
+}
+
+.animation-container{
+    position:relative;
+}
+h1 {
+    padding-left:2rem;
+    padding-top:1rem;
+}
+
+#spinner1 {
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-name: spin;
+    animation-timing-function: linear;
+    width:20px;
+    height: 20px;
+    background-color: var(--selected_background);
+    position:absolute;
+    top:50px;
+    left:30px;
+
+}
+#spinner2 {
+    animation-duration: 2.5s;
+    animation-direction: alternate;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-name: spin2;
+    animation-timing-function: linear;
+    width:20px;
+    height: 20px;
+    background-color:var(--color3) ;
+    position:absolute;
+    top:100px;
+    left:30px;
+}
+#spinner3 {
+    animation-duration: 3.5s;
+    animation-direction: alternate;
+    animation-delay: 7s;
+    animation-iteration-count: infinite;
+    animation-name: spin3;
+    animation-timing-function: linear;
+    width:20px;
+    height: 20px;
+    background-color: var(--color4);
+    position:absolute;
+    top:150px;
+    left:30px;
+}
+
+#spinner4 {
+    animation-duration: 2.5s;
+    animation-direction: alternate;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
+    animation-name: spin4;
+    animation-timing-function: linear;
+    width:20px;
+    height: 20px;
+    background-color:var(--color5);
+    position:absolute;
+    top:200px;
+    left:30px;
+}
+
+#spinner5 {
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-delay: 13s;
+    animation-iteration-count: infinite;
+    animation-name: spin5;
+    animation-timing-function: linear;
+    width:20px;
+    height: 20px;
+    background-color: var(--color6);
+    position:absolute;
+    top:250px;
+    left:30px;
+}
+
+
+#spinner6 {
+    animation-duration: 3.5s;
+    animation-direction: alternate;
+    animation-delay: 16s;
+    animation-iteration-count: infinite;
+    animation-name: spin6;
+    animation-timing-function: linear;
+    width:20px;
+    height: 20px;
+    background-color: var(--hover_background);
+    position:absolute;
+    top:300px;
+    left:30px;
+}
+
+@keyframes spin {
+    0% {
+        top: 50px;
+        left:30px;
+        transform:rotate(0rad);
+    }
+    100% {
+        top: 100px;
+        left: 1200px;
+        transform:rotate(25rad);
+    }
+}
+@keyframes spin2 {
+    0% {
+        top: 100px;
+        left:30px;
+        transform:rotate(1rad);
+    }
+    100% {
+        top: 100px;
+        left: 1200px;
+        transform:rotate(-25rad);
+    }
+}
+@keyframes spin3 {
+    0% {
+        top: 150px;
+        left:30px;
+        transform:rotate(1rad);
+    }
+    100% {
+        top: 75px;
+        left: 1200px;
+        transform:rotate(25rad);
+    }
+}
+@keyframes spin4 {
+    0% {
+        top: 200px;
+        left:30px;
+        transform:rotate(1rad);
+    }
+    100% {
+        top: 150px;
+        left: 1200px;
+        transform:rotate(12rad);
+    }
+}
+
+@keyframes spin5 {
+    0% {
+        top: 250px;
+        left:30px;
+        transform:rotate(1rad);
+    }
+    100% {
+        top: 200px;
+        left: 1200px;
+        transform:rotate(12rad);
+    }
+}
+@keyframes spin6 {
+    0% {
+        top: 300px;
+        left:30px;
+        transform:rotate(1rad);
+    }
+    100% {
+        top: 250px;
+        left: 1200px;
+        transform:rotate(12rad);
+    }
+}
+
+
+h1,h2{
+    font-family: 'Press Start 2P', cursive;
+}
+/*love and hate*/
+/*link visited hover active*/
