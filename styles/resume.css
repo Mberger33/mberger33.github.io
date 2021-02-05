@@ -1,3 +1,23 @@
+/* This is the css file/section for the Resume page*/
+
+:root{
+    --selected_background:#E5A412;
+    --hover_background: #21FFB2;
+}
+nav>ul>li{
+    display:inline-block;
+    border: black 1px solid;
+    padding:5px;
+}
+nav>ul>li:hover {
+    background-color: var(--hover_background);
+}
+
+/* Resume is the third link in the nav */
+nav>ul>:nth-child(3) {
+    background-color:var(--selected_background);
+}
+
 header {
     width:30rem;
     margin: 2rem auto 2rem auto;
