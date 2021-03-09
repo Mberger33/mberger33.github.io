@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            document.addEventListener("DOMContentLoaded",function(){
+                //global variables
+                let rangeBegin = 0;
+                let rangeEnd = 0;
+                let indexVal = 0;
+                let clickCount = 0;
+                let rArray = [];
+                const rangeEndInput = document.querySelector("#until");
+                let range = document.querySelector("#range");
+                let index = document.querySelector("#index");
+                const nextStepBtn = document.querySelector("#nextStep");
+
+                //event handlers
+                nextStepBtn.addEventListener("click",function(){
+                   //do something when the user clicks the next button
+
+                    rangeEnd = parseInt(rangeEndInput.value);
+                    rArray = fillArray(0,rangeEnd,1);
+                    rangeEnd = rArray[rArray.length-1];
+                    rangeBegin = rArray[0];
+                    indexVal = rArray[clickCount];
+                    console.log(rArray)
+                    console.log(indexVal);
+                    index.textContent = indexVal;
+                    range.textContent = rArray;
+
+                    clickCount +=1;
+                });
+
+
+                //helper functions
+                function fillArray(begin,end,increment=1) {
+                    let rangeArray = [];
+                    for (let i = begin; i< end; i+=increment) {
+                        rangeArray.push(i);
+                    }
+                    return rangeArray;
+                }
+            })
+        </script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <style>
+            #begin, #until, #increment {
+                width:2.1em;
+            }
+            .hide {
+                display:none;
+            }
+            .show {
+                display:inline;
+            }
+            .indent {
+                margin-left:2em;
+            }
+            main {padding:20px;}
+            .inputBox {
+                display:inline-block;
+            }
+            .inputBox>label {
+                font-size: 0.5em;
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="container-fluid">
+            <h1>Loop Simulator</h1>
+        </header>
+        <main class="container-fluid">
+                <h2>Python For Loop With Range Function</h2>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <h3 class="inputBox">For index in range (</h3>
+                                <div class="inputBox">
+                                    <input type="number" id="begin"><span id="comma1" class="hide">,</span><br>
+                                    <label for="begin">Begin</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input type="number" id="until" ><span id="comma2" class="hide">,</span><br>
+                                    <label for="until">End</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input type="number" id="increment"><br>
+                                    <label for="increment">Increment</label>
+                                </div>
+                        <div class="inputBox"><h3>):</h3></div>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <button id="nextStep" class="btn btn-primary">Advance Loop One Step</button>
+                        <button id="clear" class="btn btn-secondary">Clear Range</button>
+                    </div>
+                </div>
+
+                <h3 class="indent">print(index)<span id="index"></span></h3>
+                <h3 class="indent">print(range) = <span id="range"></span></h3>
+            </div>
+        </main>
+        <datalist id="zeroThru20">
+            <option value="0">
+            <option value="1">
+            <option value="2">
+            <option value="3">
+            <option value="4">
+            <option value="5">
+            <option value="6">
+            <option value="7">
+            <option value="8">
+            <option value="9">
+            <option value="10">
+            <option value="11">
+            <option value="12">
+            <option value="13">
+            <option value="14">
+            <option value="15">
+            <option value="16">
+            <option value="17">
+            <option value="18">
+            <option value="19">
+            <option value="20">
+        </datalist>
+    </body>
+</html>
